@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----mobile first design----  */
+
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
+h1 {
+  font-size: 2.1rem;
+  color: var(--Almost-Black);
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  color: var(--Medium-Gray);
+}
+a {
+  text-decoration: none;
+  color: var(--Medium-Gray);
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 1rem;
+  padding-top: 14px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  width: 88%;
+  margin: 1rem auto;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  margin-top: 2rem;
+}
+button {
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  background: none;
+}
+
+.nav-logo {
+  width: 4rem;
+}
+
+/* ----burger menu---- */
+
+.icon-menu {
+  color: var(--Medium-Gray);
+  transition: all 5ms linear;
+}
+.learn-btn {
+  padding: 0.8rem 1.4rem;
+  background-color: var(--Almost-Black);
+  color: var(--Almost-White);
+  border-radius: 12px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: var(--Almost-White);
+  position: absolute;
+  width: 64%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 1.4rem;
+  max-width: 20rem;
+
+  display: none;
+}
+
+.icon-close {
+  width: 1.2rem;
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+}
+.feature-dropdown {
+  margin-top: 52px;
+}
+.dropdown-company {
+  display: none;
+  margin-bottom: 0.8rem;
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.6rem;
+  padding-bottom: 1rem;
+  padding-right: 14px;
+  display: none;
+}
+.dropdown-btn {
+  color: var(--Medium-Gray);
+  font-weight: 600;
+}
+.login-btn {
+  color: var(--Medium-Gray);
+  padding: 10px 18px;
+  display: block;
+  width: 100%;
+}
+.register-btn {
+  border: 1px solid var(--Medium-Gray);
+  padding: 10px;
+  color: var(--Medium-Gray);
+  border-radius: 14px;
+  width: 100%;
+}
+.destop-img {
+  display: none;
+}
+.career-btn {
+  display: block;
+}
+
+/* ----hover---- */
+.icon-close:hover {
+  transition: all 1s ease;
+  transform: rotate(-90deg);
+}
+
+button:hover {
+  color: var(--Almost-Black);
+}
+.learn-btn:hover {
+  color: var(--Almost-Black);
+  background-color: var(--Almost-White);
+  border: 1px solid var(--Almost-Black);
+}
+
+/*----extra classes for javscript use ----*/
+
+.arrow {
+  transform: rotate(180deg);
+  transition: all 0.5s linear;
+}
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.show {
+  visibility: visible;
+  z-index: 10;
+}
+.active {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+/* ----tablet design---- */
+
+@media (min-width: 668px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  main {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  .nav-logo {
+    margin-top: 1rem;
+  }
+  .sidebar {
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .destop-img {
+    display: none;
+  }
+  .dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.8rem;
+    margin-left: 4rem;
+  }
+  .icon-close {
+    display: none;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .feature-dropdown {
+    all: unset;
+  }
+  .dropdown {
+    position: absolute;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.27);
+    border-radius: 4px;
+    background: var(--Almost-White);
+  }
+  .extra-button {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    margin-right: 2rem;
+  }
+}
+
+/* -----destop design----- */
+
+@media (min-width: 800px) {
+  button {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-top: 6rem;
+  }
+  p {
+    font-size: 18px;
+    margin-top: 4rem;
+    margin-bottom: 2.9rem;
+  }
+  span {
+    display: block;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4rem 5rem;
+  }
+  section {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    max-width: 450px;
+  }
+  ul {
+    margin-top: 10rem;
+  }
+  .nav-logo {
+    margin-left: 2rem;
+    width: 5.4rem;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .destop-img {
+    display: block;
+    grid-column: 2;
+  }
+  .dropdown {
+    position: absolute;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.27);
+    border-radius: 4px;
+  }
+}
